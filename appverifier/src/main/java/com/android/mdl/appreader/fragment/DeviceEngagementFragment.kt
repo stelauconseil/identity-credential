@@ -243,52 +243,35 @@ class DeviceEngagementFragment : Fragment(), QrConfirmationListener {
             val userInfo = Cb2d.UserInfo()
             val decodedUserInfo = Cb2d.decodeCb2d(qrContent, userInfo)
 
-            val message = buildString {
-                // Personal Information
-                append("--- Personal Information ---\n")
-                append("Last Name: ${decodedUserInfo.nom.ifEmpty { "Not provided" }}\n")
-                append("Usage Name: ${decodedUserInfo.usage.ifEmpty { "Not provided" }}\n")
-                append("First Names: ${decodedUserInfo.prenom.ifEmpty { "Not provided" }}\n")
-                append("Date of Birth: ${decodedUserInfo.dateNaissance.ifEmpty { "Not provided" }}\n\n")
+            // Show VdsFragment with the verification data
+            val vdsFragment = VdsFragment.newInstance(
+                firstName = decodedUserInfo.prenom.ifEmpty { "" },
+                lastName = decodedUserInfo.nom.ifEmpty { "" },
+                commonName = decodedUserInfo.usage.ifEmpty { "" },
+                dateOfBirth = decodedUserInfo.dateNaissance.ifEmpty { "" },
+                issuanceDate = decodedUserInfo.issuanceDateTime.ifEmpty { "" },
+                issuanceElapsedTime = decodedUserInfo.issuanceElapsedTime.ifEmpty { "" },
+                certificateReference = decodedUserInfo.certificateReference.ifEmpty { "" },
+                decipheredBlock = decodedUserInfo.decipheredBlock.ifEmpty { "" },
 
-                // Document Information
-                append("--- Document Information ---\n")
-                append("Expiration: ${decodedUserInfo.expiration.ifEmpty { "Not provided" }}\n")
-                append("Issuance Date: ${decodedUserInfo.issuanceDateTime.ifEmpty { "Not provided" }}\n")
-                append("Issued: ${decodedUserInfo.issuanceElapsedTime.ifEmpty { "Not available" }}\n")
 
-                // Terms of Use
-                if (decodedUserInfo.tou.isNotEmpty()) {
-                    append("\n=== Terms of Use ===\n")
-                    append(decodedUserInfo.tou)
-                }
-
-                // Errors (if any)
-                if (decodedUserInfo.errorMessage.isNotEmpty()) {
-                    append("\n\n=== Errors ===\n")
-                    append("Code: ${decodedUserInfo.errorCode}\n")
-                    append("Message: ${decodedUserInfo.errorMessage}")
-                }
-            }
-
-            AlertDialog.Builder(requireContext())
-                .setTitle("Document Verification")
-                .setMessage(message)
-                .setPositiveButton(R.string.continue_text) { _, _ ->
+                errorMessage = if (decodedUserInfo.errorMessage.isNotEmpty()) 
+                    getString(R.string.error_format, decodedUserInfo.errorMessage) 
+                    else "",
+                onContinue = {
                     onConfirmed()
                 }
-                .setNegativeButton(R.string.cancel, null)
-                .setOnDismissListener {
-                    mCodeScanner?.startPreview()
-                }
-                .show()
+            )
+            
+            vdsFragment.show(parentFragmentManager, "VdsFragment")
+            
         } catch (e: Exception) {
             logError("Error decoding VDS", e)
-            AlertDialog.Builder(requireContext())
-                .setTitle("Error")
-                .setMessage("Failed to process document:\n${e.message}")
-                .setPositiveButton("OK", null)
-                .show()
+            // Show error in VdsFragment for consistency
+            VdsFragment.newInstance(
+                errorMessage = getString(R.string.error_processing_document, e.message ?: "Unknown error"),
+                onContinue = {}
+            ).show(parentFragmentManager, "VdsFragmentError")
         }
     }
 

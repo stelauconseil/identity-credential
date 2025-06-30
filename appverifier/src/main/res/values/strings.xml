@@ -92,6 +92,18 @@
     <string name="vds_confirmation_title">Document details</string>
     <string name="vds_confirmation_message">Verify the following QR code content:\n\n%1$s\n\nDo you want to continue with this code?</string>
     <string name="continue_text">Continue</string>
+    
+    <!-- VDS Fragment -->
+    <string name="document_holder">Document Holder</string>
+    <string name="document_information">Document Information</string>
+    <string name="document_details">Document Details</string>
+    <string name="not_provided">Not provided</string>
+    <string name="dob_format">DOB: %1$s</string>
+    <string name="document_number_format">Document #: %1$s</string>
+    <string name="expiry_date_format">Expires: %1$s</string>
+    <string name="issuance_date_format">Issued: %1$s</string>
+    <string name="error_format">Error: %1$s</string>
+    <string name="error_processing_document">Failed to process document:\n%1$s</string>
 
     <!-- EU PID -->
     <string name="unique_identifier">Unique Identifier</string>

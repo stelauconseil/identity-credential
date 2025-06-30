@@ -252,7 +252,7 @@ object Cb2d {
                 field.isAccessible = true
                 Log.d("VDS", "Field: ${field.name} = ${field.get(document)}")
             }
-            
+
             // Safely get extensions
             @Suppress("UNCHECKED_CAST")
             val extensions = try {
@@ -303,8 +303,36 @@ object Cb2d {
                 if (days > 0) append("$days day${if (days > 1) "s" else ""}, ")
                 if (hours > 0) append("$hours hour${if (hours > 1) "s" else ""}, ")
                 if (minutes > 0) append("$minutes minute${if (minutes > 1) "s" else ""}, ")
-                append("$seconds second${if (seconds != 1L) "s" else ""} ago")
+                append("$seconds second${if (seconds != 1L) "s" else ""}")
             }.trimEnd(',', ' ')
+
+            // Safely get certificateReference
+            val certificateReference = try {
+                val headerField = document.javaClass.getDeclaredField("header")
+                headerField.isAccessible = true
+                val header = headerField.get(document) as? Map<*, *>
+                val certRef = header?.get("certificateReference") as? Map<*, *>
+
+                certRef?.let { ref ->
+                    val staticBlock = ref["staticBlock"]?.toString() ?: ""
+                    val dynamicBlock = ref["dynamicBlock"]?.toString() ?: ""
+                    "certificateReference={staticBlock=$staticBlock, dynamicBlock=$dynamicBlock}"
+                } ?: "certificateReference={}"
+            } catch (e: Exception) {
+                Log.e("VDS", "Error getting certificate Reference", e)
+                "certificateReference={error}"
+            }
+
+            // Safely get sign certificateReference
+            val decipheredBlock: Boolean = try {
+                val headerField = document.javaClass.getDeclaredField("header")
+                headerField.isAccessible = true
+                val header = headerField.get(document) as? Map<*, *>
+                header?.get("decipheredBlock") as? Boolean ?: false
+            } catch (e: Exception) {
+                Log.e("VDS", "Error getting deciphered Block", e)
+                false
+            }
 
             // Safely get information map
             val information = try {
@@ -327,7 +355,7 @@ object Cb2d {
             }
             
             // Helper function to safely get string from map
-            fun getStringSafely(map: Map<*, *>, key: String, default: String = "n/a"): String {
+            fun getStringSafely(map: Map<*, *>, key: String, default: String = ""): String {
                 return try {
                     (map[key]?.toString() ?: default).takeIf { it.isNotEmpty() } ?: default
                 } catch (e: Exception) {
@@ -345,6 +373,8 @@ object Cb2d {
                 issuanceDateTime = issuanceDateTime.toString(),
                 issuanceElapsedTime = elapsedTime,
                 tou = extensions["en"] ?: "",
+                certificateReference = getStringSafely(header, "certificateReference"),
+                decipheredBlock = getStringSafely(header, "decipheredBlock"),
                 errorCode = "",
                 errorMessage = ""
             )
@@ -369,6 +399,8 @@ object Cb2d {
         val expirationDateTime: String = "",
         val issuanceElapsedTime: String = "",
         val tou: String = "",
+        val certificateReference : String = "",
+        val decipheredBlock : String = "",
         var errorCode: String = "",
         var errorMessage: String = "",
     )
