@@ -1,0 +1,2870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.9.0" type="baseline" client="gradle" dependencies="false" name="AGP (8.9.0)" variant="all" version="8.9.0">
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="            stringBuilder.append(String.format(&quot;tag %d &quot;, dataItem.tag.value))"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/util/FormatUtil.kt"
+            line="65"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                        valueStr = String.format(&quot;(%d bytes, shown above)&quot;, value.size)"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/ShowDeviceResponseFragment.kt"
+            line="230"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                        valueStr = String.format(&quot;(%d bytes, shown above)&quot;, value.size)"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/ShowDeviceResponseFragment.kt"
+            line="233"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                        valueStr = String.format(&quot;%d bytes extra data&quot;, value.size)"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/ShowDeviceResponseFragment.kt"
+            line="236"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                        valueStr = String.format(&quot;(%d bytes, shown below)&quot;, value.size)"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/ShowDeviceResponseFragment.kt"
+            line="238"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                        valueStr = String.format(&quot;(%d bytes, shown above)&quot;, value.size)"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/ShowDocumentFragment.kt"
+            line="281"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                        valueStr = String.format(&quot;%d bytes extra data&quot;, value.size)"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/ShowDocumentFragment.kt"
+            line="284"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                        valueStr = String.format(&quot;(%d bytes, shown below)&quot;, value.size)"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/ShowDocumentFragment.kt"
+            line="286"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        errorLine1="            val df = SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ssXXX&quot;)"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/ShowDeviceResponseFragment.kt"
+            line="189"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        errorLine1="            val df = SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ssXXX&quot;)"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/ShowDocumentFragment.kt"
+            line="239"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="RedundantLabel"
+        message="Redundant label can be removed"
+        errorLine1="            android:label=&quot;@string/app_name&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="51"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 8.9.0 is available: 8.11.0. (There is also a newer version of 8.9.𝑥 available, if upgrading to 8.11.0 is difficult: 8.9.3)"
+        errorLine1="agp = &quot;8.9.0&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 8.9.0 is available: 8.11.0. (There is also a newer version of 8.9.𝑥 available, if upgrading to 8.11.0 is difficult: 8.9.3)"
+        errorLine1="agp = &quot;8.9.0&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 8.9.0 is available: 8.11.0. (There is also a newer version of 8.9.𝑥 available, if upgrading to 8.11.0 is difficult: 8.9.3)"
+        errorLine1="agp = &quot;8.9.0&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.library than 8.9.0 is available: 8.11.0. (There is also a newer version of 8.9.𝑥 available, if upgrading to 8.11.0 is difficult: 8.9.3)"
+        errorLine1="agp = &quot;8.9.0&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.library than 8.9.0 is available: 8.11.0. (There is also a newer version of 8.9.𝑥 available, if upgrading to 8.11.0 is difficult: 8.9.3)"
+        errorLine1="agp = &quot;8.9.0&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.library than 8.9.0 is available: 8.11.0. (There is also a newer version of 8.9.𝑥 available, if upgrading to 8.11.0 is difficult: 8.9.3)"
+        errorLine1="agp = &quot;8.9.0&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.activity:activity-compose than 1.9.3 is available: 1.10.1"
+        errorLine1="androidx-activity-compose = &quot;1.9.3&quot;"
+        errorLine2="                            ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="6"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.activity:activity-compose than 1.9.3 is available: 1.10.1"
+        errorLine1="androidx-activity-compose = &quot;1.9.3&quot;"
+        errorLine2="                            ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="6"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.activity:activity-compose than 1.9.3 is available: 1.10.1"
+        errorLine1="androidx-activity-compose = &quot;1.9.3&quot;"
+        errorLine2="                            ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="6"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1"
+        errorLine1="androidx-appcompat = &quot;1.6.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="7"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1"
+        errorLine1="androidx-appcompat = &quot;1.6.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="7"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1"
+        errorLine1="androidx-appcompat = &quot;1.6.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="7"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1"
+        errorLine1="androidx-constraintlayout = &quot;2.1.4&quot;"
+        errorLine2="                            ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="8"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1"
+        errorLine1="androidx-constraintlayout = &quot;2.1.4&quot;"
+        errorLine2="                            ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="8"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1"
+        errorLine1="androidx-constraintlayout = &quot;2.1.4&quot;"
+        errorLine2="                            ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="8"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.core:core-ktx than 1.13.1 is available: 1.16.0"
+        errorLine1="androidx-core-ktx = &quot;1.13.1&quot;"
+        errorLine2="                    ~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="9"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.core:core-ktx than 1.13.1 is available: 1.16.0"
+        errorLine1="androidx-core-ktx = &quot;1.13.1&quot;"
+        errorLine2="                    ~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="9"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.core:core-ktx than 1.13.1 is available: 1.16.0"
+        errorLine1="androidx-core-ktx = &quot;1.13.1&quot;"
+        errorLine2="                    ~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="9"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.6.1"
+        errorLine1="androidx-espresso-core = &quot;3.5.1&quot;"
+        errorLine2="                         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="10"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.6.1"
+        errorLine1="androidx-espresso-core = &quot;3.5.1&quot;"
+        errorLine2="                         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="10"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.6.1"
+        errorLine1="androidx-espresso-core = &quot;3.5.1&quot;"
+        errorLine2="                         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="10"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.2.1"
+        errorLine1="androidx-test-junit = &quot;1.1.5&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="12"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.2.1"
+        errorLine1="androidx-test-junit = &quot;1.1.5&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="12"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.2.1"
+        errorLine1="androidx-test-junit = &quot;1.1.5&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="12"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.compose than 1.7.1 is available: 1.8.1"
+        errorLine1="compose-plugin = &quot;1.7.1&quot;"
+        errorLine2="                 ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="13"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.compose than 1.7.1 is available: 1.8.1"
+        errorLine1="compose-plugin = &quot;1.7.1&quot;"
+        errorLine2="                 ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="13"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.compose than 1.7.1 is available: 1.8.1"
+        errorLine1="compose-plugin = &quot;1.7.1&quot;"
+        errorLine2="                 ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="13"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.mlkit:face-detection than 16.1.6 is available: 16.1.7"
+        errorLine1="faceDetection = &quot;16.1.6&quot;"
+        errorLine2="                ~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="14"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.mlkit:face-detection than 16.1.6 is available: 16.1.7"
+        errorLine1="faceDetection = &quot;16.1.6&quot;"
+        errorLine2="                ~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="14"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.mlkit:face-detection than 16.1.6 is available: 16.1.7"
+        errorLine1="faceDetection = &quot;16.1.6&quot;"
+        errorLine2="                ~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="14"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-android than 1.8.1 is available: 1.10.0"
+        errorLine1="kotlinx-coroutines = &quot;1.8.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="17"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-android than 1.8.1 is available: 1.10.0"
+        errorLine1="kotlinx-coroutines = &quot;1.8.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="17"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-android than 1.8.1 is available: 1.10.0"
+        errorLine1="kotlinx-coroutines = &quot;1.8.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="17"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-core than 1.8.1 is available: 1.10.0"
+        errorLine1="kotlinx-coroutines = &quot;1.8.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="17"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-core than 1.8.1 is available: 1.10.0"
+        errorLine1="kotlinx-coroutines = &quot;1.8.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="17"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-core than 1.8.1 is available: 1.10.0"
+        errorLine1="kotlinx-coroutines = &quot;1.8.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="17"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-test than 1.8.1 is available: 1.10.0"
+        errorLine1="kotlinx-coroutines = &quot;1.8.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="17"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-test than 1.8.1 is available: 1.10.0"
+        errorLine1="kotlinx-coroutines = &quot;1.8.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="17"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-test than 1.8.1 is available: 1.10.0"
+        errorLine1="kotlinx-coroutines = &quot;1.8.1&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="17"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-io-bytestring than 0.4.0 is available: 0.8.0"
+        errorLine1="kotlinx-io = &quot;0.4.0&quot;"
+        errorLine2="             ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="18"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-io-bytestring than 0.4.0 is available: 0.8.0"
+        errorLine1="kotlinx-io = &quot;0.4.0&quot;"
+        errorLine2="             ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="18"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-io-bytestring than 0.4.0 is available: 0.8.0"
+        errorLine1="kotlinx-io = &quot;0.4.0&quot;"
+        errorLine2="             ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="18"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-io-core than 0.4.0 is available: 0.5.3"
+        errorLine1="kotlinx-io = &quot;0.4.0&quot;"
+        errorLine2="             ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="18"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-io-core than 0.4.0 is available: 0.5.3"
+        errorLine1="kotlinx-io = &quot;0.4.0&quot;"
+        errorLine2="             ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="18"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-io-core than 0.4.0 is available: 0.5.3"
+        errorLine1="kotlinx-io = &quot;0.4.0&quot;"
+        errorLine2="             ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="18"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-datetime than 0.6.0 is available: 0.6.1"
+        errorLine1="kotlinx-datetime = &quot;0.6.0&quot;"
+        errorLine2="                   ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="19"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-datetime than 0.6.0 is available: 0.6.1"
+        errorLine1="kotlinx-datetime = &quot;0.6.0&quot;"
+        errorLine2="                   ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="19"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-datetime than 0.6.0 is available: 0.6.1"
+        errorLine1="kotlinx-datetime = &quot;0.6.0&quot;"
+        errorLine2="                   ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="19"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.7.0 is available: 1.8.1"
+        errorLine1="kotlinx-serialization = &quot;1.7.0&quot;"
+        errorLine2="                        ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="20"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.7.0 is available: 1.8.1"
+        errorLine1="kotlinx-serialization = &quot;1.7.0&quot;"
+        errorLine2="                        ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="20"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.7.0 is available: 1.8.1"
+        errorLine1="kotlinx-serialization = &quot;1.7.0&quot;"
+        errorLine2="                        ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="20"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-tooling-preview than 1.7.6 is available: 1.8.3"
+        errorLine1="uiToolingPreview = &quot;1.7.6&quot;"
+        errorLine2="                   ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="25"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-tooling-preview than 1.7.6 is available: 1.8.3"
+        errorLine1="uiToolingPreview = &quot;1.7.6&quot;"
+        errorLine2="                   ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="25"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-tooling-preview than 1.7.6 is available: 1.8.3"
+        errorLine1="uiToolingPreview = &quot;1.7.6&quot;"
+        errorLine2="                   ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="25"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.mlkit:text-recognition than 16.0.0 is available: 16.0.1"
+        errorLine1="mlkit = &quot;16.0.0&quot;"
+        errorLine2="        ~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.mlkit:text-recognition than 16.0.0 is available: 16.0.1"
+        errorLine1="mlkit = &quot;16.0.0&quot;"
+        errorLine2="        ~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.mlkit:text-recognition than 16.0.0 is available: 16.0.1"
+        errorLine1="mlkit = &quot;16.0.0&quot;"
+        errorLine2="        ~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-camera2 than 1.3.3 is available: 1.4.2"
+        errorLine1="camera = &quot;1.3.3&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="31"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-camera2 than 1.3.3 is available: 1.4.2"
+        errorLine1="camera = &quot;1.3.3&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="31"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-camera2 than 1.3.3 is available: 1.4.2"
+        errorLine1="camera = &quot;1.3.3&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="31"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-lifecycle than 1.3.3 is available: 1.4.2"
+        errorLine1="camera = &quot;1.3.3&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="31"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-lifecycle than 1.3.3 is available: 1.4.2"
+        errorLine1="camera = &quot;1.3.3&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="31"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-lifecycle than 1.3.3 is available: 1.4.2"
+        errorLine1="camera = &quot;1.3.3&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="31"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-view than 1.3.3 is available: 1.4.2"
+        errorLine1="camera = &quot;1.3.3&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="31"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-view than 1.3.3 is available: 1.4.2"
+        errorLine1="camera = &quot;1.3.3&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="31"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-view than 1.3.3 is available: 1.4.2"
+        errorLine1="camera = &quot;1.3.3&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="31"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.material3:material3 than 1.4.0-alpha05 is available: 1.4.0-alpha16"
+        errorLine1="compose-material3 = &quot;1.4.0-alpha05&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="32"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.material3:material3 than 1.4.0-alpha05 is available: 1.4.0-alpha16"
+        errorLine1="compose-material3 = &quot;1.4.0-alpha05&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="32"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.material3:material3 than 1.4.0-alpha05 is available: 1.4.0-alpha16"
+        errorLine1="compose-material3 = &quot;1.4.0-alpha05&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="32"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.material:material-icons-extended than 1.6.7 is available: 1.7.8"
+        errorLine1="compose-material-icons-extended = &quot;1.6.7&quot;"
+        errorLine2="                                  ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="33"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.material:material-icons-extended than 1.6.7 is available: 1.7.8"
+        errorLine1="compose-material-icons-extended = &quot;1.6.7&quot;"
+        errorLine2="                                  ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="33"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.material:material-icons-extended than 1.6.7 is available: 1.7.8"
+        errorLine1="compose-material-icons-extended = &quot;1.6.7&quot;"
+        errorLine2="                                  ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="33"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-compose than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-compose than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-compose than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-fragment than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-fragment than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-fragment than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-runtime-ktx than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-runtime-ktx than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-runtime-ktx than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-ui-ktx than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-ui-ktx than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-ui-ktx than 2.7.7 is available: 2.9.0"
+        errorLine1="androidx-navigation = &quot;2.7.7&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="34"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.8.2 is available: 2.9.1"
+        errorLine1="androidx-lifecycle-ktx = &quot;2.8.2&quot;"
+        errorLine2="                         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="40"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.8.2 is available: 2.9.1"
+        errorLine1="androidx-lifecycle-ktx = &quot;2.8.2&quot;"
+        errorLine2="                         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="40"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.8.2 is available: 2.9.1"
+        errorLine1="androidx-lifecycle-ktx = &quot;2.8.2&quot;"
+        errorLine2="                         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="40"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.8.2 is available: 2.9.1"
+        errorLine1="androidx-lifecycle-ktx = &quot;2.8.2&quot;"
+        errorLine2="                         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="40"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.8.2 is available: 2.9.1"
+        errorLine1="androidx-lifecycle-ktx = &quot;2.8.2&quot;"
+        errorLine2="                         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="40"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.8.2 is available: 2.9.1"
+        errorLine1="androidx-lifecycle-ktx = &quot;2.8.2&quot;"
+        errorLine2="                         ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="40"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.runtime:runtime-livedata than 1.6.8 is available: 1.8.3"
+        errorLine1="compose-runtime-livedata = &quot;1.6.8&quot;"
+        errorLine2="                           ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="41"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.runtime:runtime-livedata than 1.6.8 is available: 1.8.3"
+        errorLine1="compose-runtime-livedata = &quot;1.6.8&quot;"
+        errorLine2="                           ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="41"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.runtime:runtime-livedata than 1.6.8 is available: 1.8.3"
+        errorLine1="compose-runtime-livedata = &quot;1.6.8&quot;"
+        errorLine2="                           ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="41"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.work:work-runtime-ktx than 2.9.0 is available: 2.10.2"
+        errorLine1="work-version = &quot;2.9.0&quot;"
+        errorLine2="               ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="43"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.work:work-runtime-ktx than 2.9.0 is available: 2.10.2"
+        errorLine1="work-version = &quot;2.9.0&quot;"
+        errorLine2="               ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="43"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.work:work-runtime-ktx than 2.9.0 is available: 2.10.2"
+        errorLine1="work-version = &quot;2.9.0&quot;"
+        errorLine2="               ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="43"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-test-junit4 than 1.6.8 is available: 1.8.3"
+        errorLine1="compose-junit4 = &quot;1.6.8&quot;"
+        errorLine2="                 ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="50"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-test-junit4 than 1.6.8 is available: 1.8.3"
+        errorLine1="compose-junit4 = &quot;1.6.8&quot;"
+        errorLine2="                 ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="50"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-test-junit4 than 1.6.8 is available: 1.8.3"
+        errorLine1="compose-junit4 = &quot;1.6.8&quot;"
+        errorLine2="                 ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="50"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-test-manifest than 1.6.8 is available: 1.8.3"
+        errorLine1="compose-test-manifest = &quot;1.6.8&quot;"
+        errorLine2="                        ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="51"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-test-manifest than 1.6.8 is available: 1.8.3"
+        errorLine1="compose-test-manifest = &quot;1.6.8&quot;"
+        errorLine2="                        ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="51"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-test-manifest than 1.6.8 is available: 1.8.3"
+        errorLine1="compose-test-manifest = &quot;1.6.8&quot;"
+        errorLine2="                        ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="51"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation.safeargs.kotlin than 2.7.7 is available: 2.9.0"
+        errorLine1="navigation-plugin = &quot;2.7.7&quot;"
+        errorLine2="                    ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="53"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation.safeargs.kotlin than 2.7.7 is available: 2.9.0"
+        errorLine1="navigation-plugin = &quot;2.7.7&quot;"
+        errorLine2="                    ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="53"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation.safeargs.kotlin than 2.7.7 is available: 2.9.0"
+        errorLine1="navigation-plugin = &quot;2.7.7&quot;"
+        errorLine2="                    ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="53"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.exifinterface:exifinterface than 1.3.7 is available: 1.4.1"
+        errorLine1="exif = &quot;1.3.7&quot;"
+        errorLine2="       ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="55"
+            column="8"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.exifinterface:exifinterface than 1.3.7 is available: 1.4.1"
+        errorLine1="exif = &quot;1.3.7&quot;"
+        errorLine2="       ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="55"
+            column="8"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.exifinterface:exifinterface than 1.3.7 is available: 1.4.1"
+        errorLine1="exif = &quot;1.3.7&quot;"
+        errorLine2="       ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="55"
+            column="8"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-lifecycle than 1.3.4 is available: 1.4.2"
+        errorLine1="cameraLifecycle = &quot;1.3.4&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="58"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-lifecycle than 1.3.4 is available: 1.4.2"
+        errorLine1="cameraLifecycle = &quot;1.3.4&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="58"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-lifecycle than 1.3.4 is available: 1.4.2"
+        errorLine1="cameraLifecycle = &quot;1.3.4&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="58"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.sqlite:sqlite than 2.5.0-alpha12 is available: 2.5.2"
+        errorLine1="androidx-sqlite = &quot;2.5.0-alpha12&quot;"
+        errorLine2="                  ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="60"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.sqlite:sqlite than 2.5.0-alpha12 is available: 2.5.2"
+        errorLine1="androidx-sqlite = &quot;2.5.0-alpha12&quot;"
+        errorLine2="                  ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="60"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.sqlite:sqlite than 2.5.0-alpha12 is available: 2.5.2"
+        errorLine1="androidx-sqlite = &quot;2.5.0-alpha12&quot;"
+        errorLine2="                  ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="60"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.sqlite:sqlite-bundled than 2.5.0-alpha12 is available: 2.5.2"
+        errorLine1="androidx-sqlite = &quot;2.5.0-alpha12&quot;"
+        errorLine2="                  ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="60"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.sqlite:sqlite-bundled than 2.5.0-alpha12 is available: 2.5.2"
+        errorLine1="androidx-sqlite = &quot;2.5.0-alpha12&quot;"
+        errorLine2="                  ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="60"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.sqlite:sqlite-bundled than 2.5.0-alpha12 is available: 2.5.2"
+        errorLine1="androidx-sqlite = &quot;2.5.0-alpha12&quot;"
+        errorLine2="                  ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="60"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.sqlite:sqlite-framework than 2.5.0-alpha12 is available: 2.5.2"
+        errorLine1="androidx-sqlite = &quot;2.5.0-alpha12&quot;"
+        errorLine2="                  ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="60"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.sqlite:sqlite-framework than 2.5.0-alpha12 is available: 2.5.2"
+        errorLine1="androidx-sqlite = &quot;2.5.0-alpha12&quot;"
+        errorLine2="                  ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="60"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.sqlite:sqlite-framework than 2.5.0-alpha12 is available: 2.5.2"
+        errorLine1="androidx-sqlite = &quot;2.5.0-alpha12&quot;"
+        errorLine2="                  ~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="60"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.gms:play-services-identity-credentials than 16.0.0-alpha05 is available: 16.0.0-alpha08"
+        errorLine1="play-services-identity-credentials = &quot;16.0.0-alpha05&quot;"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="61"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.gms:play-services-identity-credentials than 16.0.0-alpha05 is available: 16.0.0-alpha08"
+        errorLine1="play-services-identity-credentials = &quot;16.0.0-alpha05&quot;"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="61"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.gms:play-services-identity-credentials than 16.0.0-alpha05 is available: 16.0.0-alpha08"
+        errorLine1="play-services-identity-credentials = &quot;16.0.0-alpha05&quot;"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="61"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.credentials:credentials than 1.5.0-rc01 is available: 1.5.0"
+        errorLine1="androidx-credentials = &quot;1.5.0-rc01&quot;"
+        errorLine2="                       ~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="62"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.credentials:credentials than 1.5.0-rc01 is available: 1.5.0"
+        errorLine1="androidx-credentials = &quot;1.5.0-rc01&quot;"
+        errorLine2="                       ~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="62"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.credentials:credentials than 1.5.0-rc01 is available: 1.5.0"
+        errorLine1="androidx-credentials = &quot;1.5.0-rc01&quot;"
+        errorLine2="                       ~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="62"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        message="There are multiple dependencies androidx.camera:camera-lifecycle but with different version"
+        errorLine1="androidx-camera-lifecycle = { group = &quot;androidx.camera&quot;, name = &quot;camera-lifecycle&quot;, version.ref = &quot;camera&quot; }"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="101"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        message="There are multiple dependencies androidx.camera:camera-lifecycle but with different version"
+        errorLine1="androidx-camera-lifecycle = { group = &quot;androidx.camera&quot;, name = &quot;camera-lifecycle&quot;, version.ref = &quot;camera&quot; }"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="101"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        message="There are multiple dependencies androidx.camera:camera-lifecycle but with different version"
+        errorLine1="androidx-camera-lifecycle = { group = &quot;androidx.camera&quot;, name = &quot;camera-lifecycle&quot;, version.ref = &quot;camera&quot; }"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="101"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        message="There are multiple dependencies androidx.camera:camera-lifecycle but with different version"
+        errorLine1="camera-lifecycle = { group = &quot;androidx.camera&quot;, name = &quot;camera-lifecycle&quot;, version.ref = &quot;cameraLifecycle&quot; }"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="142"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        message="There are multiple dependencies androidx.camera:camera-lifecycle but with different version"
+        errorLine1="camera-lifecycle = { group = &quot;androidx.camera&quot;, name = &quot;camera-lifecycle&quot;, version.ref = &quot;cameraLifecycle&quot; }"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="142"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        message="There are multiple dependencies androidx.camera:camera-lifecycle but with different version"
+        errorLine1="camera-lifecycle = { group = &quot;androidx.camera&quot;, name = &quot;camera-lifecycle&quot;, version.ref = &quot;cameraLifecycle&quot; }"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Projects/FIN/identity-credential/gradle/libs.versions.toml"
+            line="142"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="        val resId = context.resources.getIdentifier(name, &quot;drawable&quot;, context.packageName)"
+        errorLine2="                                      ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/stelau/cb2d/Cb2d.kt"
+            line="465"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                        context.resources.getIdentifier(name, &quot;raw&quot;, context.packageName)"
+        errorLine2="                                          ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/stelau/cb2d/utils/CevManager.kt"
+            line="39"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                        context.resources.getIdentifier(name, &quot;raw&quot;, context.packageName)"
+        errorLine2="                                          ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/stelau/cb2d/utils/CevManager.kt"
+            line="47"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                context.resources.getIdentifier(keyPath, &quot;raw&quot;, context.packageName)"
+        errorLine2="                                  ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/stelau/cb2d/utils/KeyUtils.kt"
+            line="34"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                context.resources.getIdentifier(keyPath, &quot;raw&quot;, context.packageName)"
+        errorLine2="                                  ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/stelau/cb2d/utils/KeyUtils.kt"
+            line="53"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="DataBindingWithoutKapt"
+        message="If you plan to use data binding in a Kotlin project, you should apply the kotlin-kapt plugin."
+        errorLine1="        dataBinding = true"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="49"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="PackagedPrivateKey"
+        message="The `vds/renfeprivate.key` file seems to be a private key file. Please make sure not to embed this in your APK file.">
+        <location
+            file="src/main/res/raw/vds/renfeprivate.key"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        message="`checkServerTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="$GRADLE_USER_HOME/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk18on/1.81/819fd6f5d170c8b8bf8c5acc73816e9c36574042/bcpkix-jdk18on-1.81.jar"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 29"
+        errorLine1="        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/transfer/TransferManager.kt"
+            line="281"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 29. Merge all the resources in this folder into `mipmap-anydpi`.">
+        <location
+            file="src/main/res/mipmap-anydpi-v26"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (904 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="        android:pathData=&quot;M19.14,12.94c0.04,-0.3 0.06,-0.61 0.06,-0.94c0,-0.32 -0.02,-0.64 -0.07,-0.94l2.03,-1.58c0.18,-0.14 0.23,-0.41 0.12,-0.61l-1.92,-3.32c-0.12,-0.22 -0.37,-0.29 -0.59,-0.22l-2.39,0.96c-0.5,-0.38 -1.03,-0.7 -1.62,-0.94L14.4,2.81c-0.04,-0.24 -0.24,-0.41 -0.48,-0.41h-3.84c-0.24,0 -0.43,0.17 -0.47,0.41L9.25,5.35C8.66,5.59 8.12,5.92 7.63,6.29L5.24,5.33c-0.22,-0.08 -0.47,0 -0.59,0.22L2.74,8.87C2.62,9.08 2.66,9.34 2.86,9.48l2.03,1.58C4.84,11.36 4.8,11.69 4.8,12s0.02,0.64 0.07,0.94l-2.03,1.58c-0.18,0.14 -0.23,0.41 -0.12,0.61l1.92,3.32c0.12,0.22 0.37,0.29 0.59,0.22l2.39,-0.96c0.5,0.38 1.03,0.7 1.62,0.94l0.36,2.54c0.05,0.24 0.24,0.41 0.48,0.41h3.84c0.24,0 0.44,-0.17 0.47,-0.41l0.36,-2.54c0.59,-0.24 1.13,-0.56 1.62,-0.94l2.39,0.96c0.22,0.08 0.47,0 0.59,-0.22l1.92,-3.32c0.12,-0.22 0.07,-0.47 -0.12,-0.61L19.14,12.94zM12,15.6c-1.98,0 -3.6,-1.62 -3.6,-3.6s1.62,-3.6 3.6,-3.6s3.6,1.62 3.6,3.6S13.98,15.6 12,15.6z&quot; />"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_settings.xml"
+            line="10"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_delete` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_delete.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.previous` appears to be unused"
+        errorLine1="    &lt;string name=&quot;previous&quot;>Previous&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="5"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.custom` appears to be unused"
+        errorLine1="    &lt;string name=&quot;custom&quot;>Custom&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="7"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.select` appears to be unused"
+        errorLine1="    &lt;string name=&quot;select&quot;>Select&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="8"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.family_name` appears to be unused"
+        errorLine1="    &lt;string name=&quot;family_name&quot;>Family Name&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="27"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.given_name` appears to be unused"
+        errorLine1="    &lt;string name=&quot;given_name&quot;>Given Names&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.birth_date` appears to be unused"
+        errorLine1="    &lt;string name=&quot;birth_date&quot;>Date of birth&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="29"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.issue_date` appears to be unused"
+        errorLine1="    &lt;string name=&quot;issue_date&quot;>Date of issue&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="30"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.expiry_date` appears to be unused"
+        errorLine1="    &lt;string name=&quot;expiry_date&quot;>Date of expiry&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="31"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.issuing_country` appears to be unused"
+        errorLine1="    &lt;string name=&quot;issuing_country&quot;>Issuing country&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="32"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.issuing_authority` appears to be unused"
+        errorLine1="    &lt;string name=&quot;issuing_authority&quot;>Issuing authority&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="33"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.document_number` appears to be unused"
+        errorLine1="    &lt;string name=&quot;document_number&quot;>Licence number&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="34"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.portrait` appears to be unused"
+        errorLine1="    &lt;string name=&quot;portrait&quot;>Portrait of mDL holder&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.driving_privileges` appears to be unused"
+        errorLine1="    &lt;string name=&quot;driving_privileges&quot;>Categories of vehicles&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="36"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.un_distinguishing_sign` appears to be unused"
+        errorLine1="    &lt;string name=&quot;un_distinguishing_sign&quot;>UN distinguishing sign&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.administrative_number` appears to be unused"
+        errorLine1="    &lt;string name=&quot;administrative_number&quot;>Administrative number&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="38"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.sex` appears to be unused"
+        errorLine1="    &lt;string name=&quot;sex&quot;>Sex&lt;/string>"
+        errorLine2="            ~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="39"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.height` appears to be unused"
+        errorLine1="    &lt;string name=&quot;height&quot;>Height (cm)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="40"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.weight` appears to be unused"
+        errorLine1="    &lt;string name=&quot;weight&quot;>Weight (kg)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="41"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.eye_colour` appears to be unused"
+        errorLine1="    &lt;string name=&quot;eye_colour&quot;>Eye colour&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="42"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.hair_colour` appears to be unused"
+        errorLine1="    &lt;string name=&quot;hair_colour&quot;>Hair colour&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="43"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.birth_place` appears to be unused"
+        errorLine1="    &lt;string name=&quot;birth_place&quot;>Place of birth&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="44"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.resident_address` appears to be unused"
+        errorLine1="    &lt;string name=&quot;resident_address&quot;>Permanent place of residence&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="45"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.portrait_capture_date` appears to be unused"
+        errorLine1="    &lt;string name=&quot;portrait_capture_date&quot;>Portrait image timestamp&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="46"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.age_in_years` appears to be unused"
+        errorLine1="    &lt;string name=&quot;age_in_years&quot;>How old are you (in years)?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="47"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.age_birth_year` appears to be unused"
+        errorLine1="    &lt;string name=&quot;age_birth_year&quot;>In what year were you born?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="48"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.age_over_18` appears to be unused"
+        errorLine1="    &lt;string name=&quot;age_over_18&quot;>Age over 18?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="49"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.age_over_21` appears to be unused"
+        errorLine1="    &lt;string name=&quot;age_over_21&quot;>Age over 21?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="50"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.issuing_jurisdiction` appears to be unused"
+        errorLine1="    &lt;string name=&quot;issuing_jurisdiction&quot;>Issuing jurisdiction&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="51"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.nationality` appears to be unused"
+        errorLine1="    &lt;string name=&quot;nationality&quot;>Nationality&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="52"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.resident_city` appears to be unused"
+        errorLine1="    &lt;string name=&quot;resident_city&quot;>Resident city&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="53"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.resident_state` appears to be unused"
+        errorLine1="    &lt;string name=&quot;resident_state&quot;>Resident state&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="54"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.resident_postal_code` appears to be unused"
+        errorLine1="    &lt;string name=&quot;resident_postal_code&quot;>Resident postal code&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.resident_country` appears to be unused"
+        errorLine1="    &lt;string name=&quot;resident_country&quot;>Resident country&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="56"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.family_name_national_character` appears to be unused"
+        errorLine1="    &lt;string name=&quot;family_name_national_character&quot;>Family name in national characters&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="57"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.given_name_national_character` appears to be unused"
+        errorLine1="    &lt;string name=&quot;given_name_national_character&quot;>Given name in national characters&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="58"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.signature_usual_mark` appears to be unused"
+        errorLine1="    &lt;string name=&quot;signature_usual_mark&quot;>Signature / usual mark&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="59"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.registration_info` appears to be unused"
+        errorLine1="    &lt;string name=&quot;registration_info&quot;>Vehicle Registration Information&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="62"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.registration_holder` appears to be unused"
+        errorLine1="    &lt;string name=&quot;registration_holder&quot;>Vehicle Registration Holder Information&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="63"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.basic_vehicle_info` appears to be unused"
+        errorLine1="    &lt;string name=&quot;basic_vehicle_info&quot;>Basic Vehicle Information&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="64"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.vin` appears to be unused"
+        errorLine1="    &lt;string name=&quot;vin&quot;>Vehicle Identification Number&lt;/string>"
+        errorLine2="            ~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="65"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.close_connection` appears to be unused"
+        errorLine1="    &lt;string name=&quot;close_connection&quot;>Close Connection&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="67"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_vtr_fn` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_vtr_fn&quot;>Family Name&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="68"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_vtr_gn` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_vtr_gn&quot;>Given Name&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="69"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_vtr_dob` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_vtr_dob&quot;>Date of Birth&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="70"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_vtr_sex` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_vtr_sex&quot;>Sex&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="71"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_vtr_v_RA01_1` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_vtr_v_RA01_1&quot;>First vaccination against RA01&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="72"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_vtr_v_RA01_2` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_vtr_v_RA01_2&quot;>Second vaccination against RA01&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="73"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_vtr_pid_PPN` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_vtr_pid_PPN&quot;>ID with pasport number&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="74"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_vtr_pid_DL` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_vtr_pid_DL&quot;>ID with driver’s license number&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="75"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_att_1D47_vaccinated` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_att_1D47_vaccinated&quot;>Indication of vaccination against Yellow Fever&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="76"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_att_RA01_vaccinated` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_att_RA01_vaccinated&quot;>Indication of vaccination against COVID-19&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="77"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_att_RA01_test` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_att_RA01_test&quot;>Indication of test event for COVID-19&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="78"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_att_safeEntry_Leisure` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_att_safeEntry_Leisure&quot;>Safe entry indication&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="79"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_att_fac` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_att_fac&quot;>Facial Image&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="80"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_att_fni` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_att_fni&quot;>Family Name Initial&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="81"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_att_gni` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_att_gni&quot;>Given Name Initial&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="82"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_att_by` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_att_by&quot;>Birth Year&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="83"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_att_bm` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_att_bm&quot;>Birth Month&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="84"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.micov_att_bd` appears to be unused"
+        errorLine1="    &lt;string name=&quot;micov_att_bd&quot;>Birth Day&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="85"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.item_settings` appears to be unused"
+        errorLine1="    &lt;string name=&quot;item_settings&quot;>Settings&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="86"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.show_qr` appears to be unused"
+        errorLine1="    &lt;string name=&quot;show_qr&quot;>Show QR Code for\nReverse Engagement&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="88"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.dhs_compliance` appears to be unused"
+        errorLine1="    &lt;string name=&quot;dhs_compliance&quot;>DHS Compliance&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="89"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.unique_identifier` appears to be unused"
+        errorLine1="    &lt;string name=&quot;unique_identifier&quot;>Unique Identifier&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="97"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.birth_family_name` appears to be unused"
+        errorLine1="    &lt;string name=&quot;birth_family_name&quot;>Family Name at Birth&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="98"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.birth_family_name_national_characters` appears to be unused"
+        errorLine1="    &lt;string name=&quot;birth_family_name_national_characters&quot;>Family Name at Birth in national characters&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="99"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.first_name_at_birth` appears to be unused"
+        errorLine1="    &lt;string name=&quot;first_name_at_birth&quot;>First Name at Birth&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="100"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.first_name_at_birth_national_characters` appears to be unused"
+        errorLine1="    &lt;string name=&quot;first_name_at_birth_national_characters&quot;>First Name at Birth in national characters&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="101"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.gender` appears to be unused"
+        errorLine1="    &lt;string name=&quot;gender&quot;>Gender&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="102"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.facial_portrait` appears to be unused"
+        errorLine1="    &lt;string name=&quot;facial_portrait&quot;>FacialImage/Portrait&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="103"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_template_finger` appears to be unused"
+        errorLine1="    &lt;string name=&quot;biometric_template_finger&quot;>Fingerprint&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="104"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.age_over_13` appears to be unused"
+        errorLine1="    &lt;string name=&quot;age_over_13&quot;>Age over 13?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="105"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.age_over_16` appears to be unused"
+        errorLine1="    &lt;string name=&quot;age_over_16&quot;>Age over 16?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="106"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.age_over_60` appears to be unused"
+        errorLine1="    &lt;string name=&quot;age_over_60&quot;>Age over 60?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="107"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.age_over_65` appears to be unused"
+        errorLine1="    &lt;string name=&quot;age_over_65&quot;>Age over 65?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="108"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.age_over_68` appears to be unused"
+        errorLine1="    &lt;string name=&quot;age_over_68&quot;>Age pver 68?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="109"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.raw.vds` appears to be unused">
+        <location
+            file="src/main/res/raw/vds"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        errorLine1="    &lt;string name=&quot;show_qr_code_instructions&quot;>Scan QR code with mdoc application.\n\nNOTE: This is not supported for ISO 18013-7, only 23220-4.&lt;/string>"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="87"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnnecessaryRequiredFeature"
+        message="Consider whether this feature (`android.hardware.nfc`) really is required for the app to function; you can set `android:required=&quot;false&quot;` to indicate that the feature is used but not required"
+        errorLine1="        android:name=&quot;android.hardware.nfc&quot;"
+        errorLine2="                      ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="12"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX function `createBitmap` instead?"
+        errorLine1="        val paddedQrCodeImg = Bitmap.createBitmap("
+        errorLine2="                              ^">
+        <location
+            file="src/main/java/com/stelau/cb2d/Cb2d.kt"
+            line="325"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX function `createBitmap` instead?"
+        errorLine1="            Bitmap.createBitmap(pictosBlockWidth, pictosBlockHeight, Bitmap.Config.ARGB_8888)"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/stelau/cb2d/Cb2d.kt"
+            line="348"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX function `createBitmap` instead?"
+        errorLine1="            Bitmap.createBitmap("
+        errorLine2="            ^">
+        <location
+            file="src/main/java/com/stelau/cb2d/Cb2d.kt"
+            line="429"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX function `createBitmap` instead?"
+        errorLine1="        val bitmap = Bitmap.createBitmap(this.width, this.height, Bitmap.Config.ARGB_8888)"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/stelau/cb2d/Cb2d.kt"
+            line="450"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `Bitmap.scale` instead?"
+        errorLine1="            Bitmap.createScaledBitmap(bitmap, width, height, true)"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/stelau/cb2d/Cb2d.kt"
+            line="473"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `Activity.findNavController` instead?"
+        errorLine1="        Navigation.findNavController(this, R.id.nav_host_fragment)"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/MainActivity.kt"
+            line="25"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX function `createBitmap` instead?"
+        errorLine1="        val bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/ShowQrFragment.kt"
+            line="67"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;io.github.ehn-digital-green-development:base45:0.0.3&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="114"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;org.msgpack:msgpack-core:0.9.8&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="115"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.14.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="116"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;commons-codec:commons-codec:1.17.1&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="117"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;com.squareup.okhttp3:okhttp:4.10.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="118"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_show_device_response.xml"
+            line="25"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_show_device_response.xml"
+            line="48"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_show_document.xml"
+            line="25"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_show_document.xml"
+            line="48"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                binding.tvStatus.text = &quot;New request sent...&quot;"
+        errorLine2="                                         ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/TransferFragment.kt"
+            line="57"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    binding.tvStatus.text = &quot;Trying to connect to mDoc app...&quot;"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/TransferFragment.kt"
+            line="62"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    binding.tvStatus.text = &quot;Device engagement received...&quot;"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/TransferFragment.kt"
+            line="77"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    binding.tvStatus.text = &quot;Move reader into NFC field...&quot;"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/TransferFragment.kt"
+            line="80"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    binding.tvStatus.text = &quot;Connected. Requesting mDoc...&quot;"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/TransferFragment.kt"
+            line="83"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    binding.tvStatus.text = &quot;Disconnected&quot;"
+        errorLine2="                                             ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/android/mdl/appreader/fragment/TransferFragment.kt"
+            line="91"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Show results&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Show results&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_show_device_response.xml"
+            line="43"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Close&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Close&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_show_device_response.xml"
+            line="68"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Show results&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Show results&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_show_document.xml"
+            line="43"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Close\n(Message)&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Close\n(Message)&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_show_document.xml"
+            line="82"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Close\n(Specific)&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Close\n(Specific)&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_show_document.xml"
+            line="95"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Close\n(None)&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Close\n(None)&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_show_document.xml"
+            line="108"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cancel&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Cancel&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_show_qr.xml"
+            line="49"
+            column="17"/>
+    </issue>
+
+</issues>
