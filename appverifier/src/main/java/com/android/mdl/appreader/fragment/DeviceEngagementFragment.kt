@@ -3,8 +3,6 @@ package com.android.mdl.appreader.fragment
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import android.net.Uri
 import android.nfc.NfcAdapter
 import android.os.Bundle
@@ -12,28 +10,28 @@ import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.app.AlertDialog
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.android.mdl.appreader.transfer.QrConfirmationListener
 import com.android.mdl.appreader.R
 import com.android.mdl.appreader.databinding.FragmentDeviceEngagementBinding
+import com.android.mdl.appreader.transfer.QrConfirmationListener
 import com.android.mdl.appreader.transfer.TransferManager
 import com.android.mdl.appreader.util.TransferStatus
 import com.android.mdl.appreader.util.logDebug
 import com.android.mdl.appreader.util.logError
 import com.budiyev.android.codescanner.CodeScanner
+import com.budiyev.android.codescanner.CodeScanner.com.google.zxing.BarcodeFormat.QR_CODE
 import com.budiyev.android.codescanner.DecodeCallback
+import com.budiyev.android.codescanner.ScanMode
+import com.google.zxing.BarcodeFormat
+import com.google.zxing.BarcodeFormat.QR_CODE
 import com.stelau.cb2d.Cb2d
-import com.stelau.cb2d.Cb2d.UserInfo
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
+
 class DeviceEngagementFragment : Fragment(), QrConfirmationListener {
 
     private val args: DeviceEngagementFragmentArgs by navArgs()
@@ -80,6 +78,8 @@ class DeviceEngagementFragment : Fragment(), QrConfirmationListener {
 
         // QR Code Engagement
         mCodeScanner = CodeScanner(requireContext(), binding.csScanner)
+        mCodeScanner?.formats = listOf(QR_CODE)
+        mCodeScanner?.scanMode = ScanMode.SINGLE
         mCodeScanner?.decodeCallback = DecodeCallback { result ->
             requireActivity().runOnUiThread {
                 val qrText = result.text
