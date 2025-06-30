@@ -48,6 +48,10 @@ import java.security.spec.PKCS8EncodedKeySpec
 import java.util.Base64
 import java.util.concurrent.Executor
 
+interface QrConfirmationListener {
+    fun onQrContentReady(qrContent: String, onConfirmed: () -> Unit)
+}
+
 class TransferManager private constructor(private val context: Context) {
 
     companion object {
@@ -63,6 +67,7 @@ class TransferManager private constructor(private val context: Context) {
 
     var usingReverseEngagement: Boolean = false
     var readerEngagement: ByteArray? = null
+    private var qrConfirmationListener: QrConfirmationListener? = null
 
     var mdocConnectionMethod: MdocConnectionMethod? = null
         private set
@@ -133,8 +138,28 @@ class TransferManager private constructor(private val context: Context) {
         usingReverseEngagement = true
     }
 
-    fun setQrDeviceEngagement(qrDeviceEngagement: String) =
-        verification?.setDeviceEngagementFromQrCode(qrDeviceEngagement)
+    fun setQrConfirmationListener(listener: QrConfirmationListener) {
+        this.qrConfirmationListener = listener
+    }
+
+    fun setQrDeviceEngagement(qrDeviceEngagement: String, onConfirmed: (() -> Unit)? = null) {
+        logDebug("setQrDeviceEngagement: $qrDeviceEngagement")
+        
+        // If no listener is set, continue immediately (backward compatibility)
+        val listener = qrConfirmationListener
+        if (listener == null || onConfirmed == null) {
+            verification?.setDeviceEngagementFromQrCode(qrDeviceEngagement)
+            onConfirmed?.invoke()
+            return
+        }
+        
+        // Show QR content and wait for confirmation
+        listener.onQrContentReady(qrDeviceEngagement) {
+            // This will be called when user confirms
+            verification?.setDeviceEngagementFromQrCode(qrDeviceEngagement)
+            onConfirmed.invoke()
+        }
+    }
 
     fun setNdefDeviceEngagement(adapter: NfcAdapter, activity: Activity) =
         adapter.enableReaderMode(

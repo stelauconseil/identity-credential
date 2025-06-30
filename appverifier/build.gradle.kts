@@ -51,6 +51,10 @@ android {
         compose = true
     }
 
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+
     packaging {
         resources {
             excludes += listOf("/META-INF/{AL2.0,LGPL2.1}")
@@ -104,4 +108,12 @@ dependencies {
     testImplementation(libs.kotlin.test)
     androidTestImplementation(libs.androidx.test.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Stelau
+    implementation(files("libs/cev-2.1.7.jar"))
+    implementation("io.github.ehn-digital-green-development:base45:0.0.3")
+    implementation("org.msgpack:msgpack-core:0.9.9")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.19.1")
+    implementation("commons-codec:commons-codec:1.18.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 }

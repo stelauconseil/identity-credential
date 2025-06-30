@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App Verifier</string>
+    <string name="app_name">Wallet Verifier</string>
     <!-- Buttons -->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
@@ -15,13 +15,13 @@
     <string name="mdl_over_18">Older than 18</string>
     <string name="mdl_over_21">Older than 21"</string>
     <string name="mdl_mandatory_fields">Mandatory fields"</string>
-    <string name="mdl_us_transportation">mDL for US transportation</string>
+    <string name="mdl_us_transportation">mDL for USA</string>
     <string name="mdl_custom">Custom"</string>
     <string name="mdl_full">Full mDL"</string>
-    <string name="mdl_micov_linkage">Request mDL + micov with linkage</string>
-    <string name="mvr_full">Request mVR"</string>
-    <string name="micov_full">Request micov"</string>
-    <string name="eu_pid_full">Request EU Personal ID"</string>
+    <string name="mdl_micov_linkage">mDL + micov with linkage</string>
+    <string name="mvr_full">mVR"</string>
+    <string name="micov_full">micov"</string>
+    <string name="eu_pid_full">EU PID"</string>
 
     <!-- mDL strings -->
     <string name="family_name">Family Name</string>
@@ -87,6 +87,11 @@
     <string name="show_qr_code_instructions">Scan QR code with mdoc application.\n\nNOTE: This is not supported for ISO 18013-7, only 23220-4.</string>
     <string name="show_qr">Show QR Code for\nReverse Engagement</string>
     <string name="dhs_compliance">DHS Compliance</string>
+    
+    <!-- QR Code Confirmation -->
+    <string name="vds_confirmation_title">Document details</string>
+    <string name="vds_confirmation_message">Verify the following QR code content:\n\n%1$s\n\nDo you want to continue with this code?</string>
+    <string name="continue_text">Continue</string>
 
     <!-- EU PID -->
     <string name="unique_identifier">Unique Identifier</string>

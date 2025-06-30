@@ -1,10 +1,10 @@
 package com.android.mdl.appreader
 
 import android.app.Application
+import android.content.Context
 import org.multipaz.util.Logger
 import androidx.preference.PreferenceManager
 import org.multipaz.crypto.X509Cert
-import org.multipaz.crypto.javaX509Certificate
 import org.multipaz.documenttype.DocumentTypeRepository
 import org.multipaz.documenttype.knowntypes.DrivingLicense
 import org.multipaz.documenttype.knowntypes.EUPersonalID
@@ -18,12 +18,14 @@ import org.multipaz.trustmanagement.TrustPoint
 import com.android.mdl.appreader.settings.UserPreferences
 import com.android.mdl.appreader.util.KeysAndCertificates
 import com.google.android.material.color.DynamicColors
+import com.stelau.democb2d.utils.KeyManager
 import java.io.ByteArrayInputStream
-import java.security.Security
 import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate
 import kotlinx.io.files.Path
 import java.io.File
+import com.stelau.cb2d.utils.CevManager
+import com.stelau.cbor.CborManager
 
 class VerifierApp : Application() {
 
@@ -48,6 +50,13 @@ class VerifierApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        instance = this
+
+        KeyManager.loadKeys(this)
+        CevManager.initializeCev(this)
+        CborManager.initialize()
+
+
         // Do NOT add BouncyCastle here - we want to use the normal AndroidOpenSSL JCA provider
         DynamicColors.applyToActivitiesIfAvailable(this)
         userPreferencesInstance = userPreferences
@@ -83,6 +92,12 @@ class VerifierApp : Application() {
     }
 
     companion object {
+
+        private lateinit var instance: VerifierApp
+
+        fun getApplicationContext(): Context {
+            return instance.applicationContext
+        }
 
         private lateinit var userPreferencesInstance: UserPreferences
         lateinit var trustManagerInstance: TrustManager

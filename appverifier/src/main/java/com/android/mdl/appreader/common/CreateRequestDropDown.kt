@@ -31,6 +31,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.LocalConfiguration
 import com.android.mdl.appreader.home.DocumentElementsRequest
 import com.android.mdl.appreader.home.RequestingDocumentState
 
@@ -42,7 +43,8 @@ fun CreateRequestDropDown(
     onSelectionUpdated: (elements: DocumentElementsRequest) -> Unit,
     onConfirm: (request: RequestingDocumentState) -> Unit
 ) {
-    val heightValue = if (dropDownOpened) 500.dp else 0.dp
+    val maxHeight = LocalConfiguration.current.screenHeightDp.dp * 0.55f // 55% of screen height
+    val heightValue = if (dropDownOpened) maxHeight else 0.dp
     val height by animateDpAsState(
         targetValue = heightValue,
         animationSpec = tween(300)
@@ -58,9 +60,9 @@ fun CreateRequestDropDown(
                 .verticalScroll(cardScrollState),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(8.dp))
             Text(
-                modifier = Modifier.padding(vertical = 8.dp),
+                modifier = Modifier.padding(vertical = 4.dp),
                 text = "Request mDL",
                 style = MaterialTheme.typography.titleSmall
             )
@@ -80,37 +82,38 @@ fun CreateRequestDropDown(
                 onRequestFieldsToggled = onSelectionUpdated
             )
 
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(4.dp))
             ElementChip(
                 modifier = Modifier.fillMaxWidth(),
                 documentElementsRequest = selectionState.mVR,
                 onRequestFieldsToggled = onSelectionUpdated
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(4.dp))
             ElementChip(
                 modifier = Modifier.fillMaxWidth(),
                 documentElementsRequest = selectionState.micov,
                 onRequestFieldsToggled = onSelectionUpdated
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(4.dp))
             ElementChip(
                 modifier = Modifier.fillMaxWidth(),
                 documentElementsRequest = selectionState.euPid,
                 onRequestFieldsToggled = onSelectionUpdated
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(4.dp))
             ElementChip(
                 modifier = Modifier.fillMaxWidth(),
                 documentElementsRequest = selectionState.mdlWithLinkage,
                 onRequestFieldsToggled = onSelectionUpdated
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            //Spacer(modifier = Modifier.height(8.dp))
             Button(
-                onClick = { onConfirm(selectionState) }
+                onClick = { onConfirm(selectionState) },
+                modifier = Modifier.padding(vertical = 6.dp)
             ) {
                 Text(text = "Done")
             }

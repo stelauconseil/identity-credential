@@ -3,6 +3,8 @@ package com.android.mdl.appreader.fragment
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import android.net.Uri
 import android.nfc.NfcAdapter
 import android.os.Bundle
@@ -10,24 +12,29 @@ import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.app.AlertDialog
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.android.mdl.appreader.transfer.QrConfirmationListener
 import com.android.mdl.appreader.R
 import com.android.mdl.appreader.databinding.FragmentDeviceEngagementBinding
 import com.android.mdl.appreader.transfer.TransferManager
 import com.android.mdl.appreader.util.TransferStatus
 import com.android.mdl.appreader.util.logDebug
+import com.android.mdl.appreader.util.logError
 import com.budiyev.android.codescanner.CodeScanner
 import com.budiyev.android.codescanner.DecodeCallback
+import com.stelau.cb2d.Cb2d
+import com.stelau.cb2d.Cb2d.UserInfo
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class DeviceEngagementFragment : Fragment() {
+class DeviceEngagementFragment : Fragment(), QrConfirmationListener {
 
     private val args: DeviceEngagementFragmentArgs by navArgs()
 
@@ -63,6 +70,7 @@ class DeviceEngagementFragment : Fragment() {
         _binding = FragmentDeviceEngagementBinding.inflate(inflater, container, false)
         transferManager = TransferManager.getInstance(requireContext())
         transferManager.initVerificationHelper()
+        transferManager.setQrConfirmationListener(this)
         return binding.root
 
     }
@@ -76,7 +84,11 @@ class DeviceEngagementFragment : Fragment() {
             requireActivity().runOnUiThread {
                 val qrText = result.text
                 logDebug("qrText: $qrText")
-                transferManager.setQrDeviceEngagement(qrText)
+                // The actual processing will happen in the onQrContentReady callback
+                transferManager.setQrDeviceEngagement(qrText) {
+                    // This will be called after user confirms the QR code
+                    logDebug("QR code confirmed, continuing with verification...")
+                }
             }
         }
 
@@ -223,6 +235,60 @@ class DeviceEngagementFragment : Fragment() {
                     args.requestDocumentList
                 )
             )
+        }
+    }
+
+    override fun onQrContentReady(qrContent: String, onConfirmed: () -> Unit) {
+        try {
+            val userInfo = Cb2d.UserInfo()
+            val decodedUserInfo = Cb2d.decodeCb2d(qrContent, userInfo)
+
+            val message = buildString {
+                // Personal Information
+                append("--- Personal Information ---\n")
+                append("Last Name: ${decodedUserInfo.nom.ifEmpty { "Not provided" }}\n")
+                append("Usage Name: ${decodedUserInfo.usage.ifEmpty { "Not provided" }}\n")
+                append("First Names: ${decodedUserInfo.prenom.ifEmpty { "Not provided" }}\n")
+                append("Date of Birth: ${decodedUserInfo.dateNaissance.ifEmpty { "Not provided" }}\n\n")
+
+                // Document Information
+                append("--- Document Information ---\n")
+                append("Expiration: ${decodedUserInfo.expiration.ifEmpty { "Not provided" }}\n")
+                append("Issuance Date: ${decodedUserInfo.issuanceDateTime.ifEmpty { "Not provided" }}\n")
+                append("Issued: ${decodedUserInfo.issuanceElapsedTime.ifEmpty { "Not available" }}\n")
+
+                // Terms of Use
+                if (decodedUserInfo.tou.isNotEmpty()) {
+                    append("\n=== Terms of Use ===\n")
+                    append(decodedUserInfo.tou)
+                }
+
+                // Errors (if any)
+                if (decodedUserInfo.errorMessage.isNotEmpty()) {
+                    append("\n\n=== Errors ===\n")
+                    append("Code: ${decodedUserInfo.errorCode}\n")
+                    append("Message: ${decodedUserInfo.errorMessage}")
+                }
+            }
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("Document Verification")
+                .setMessage(message)
+                .setPositiveButton(R.string.continue_text) { _, _ ->
+                    onConfirmed()
+                }
+                .setNegativeButton(R.string.cancel, null)
+                .setOnDismissListener {
+                    mCodeScanner?.startPreview()
+                }
+                .show()
+        } catch (e: Exception) {
+            logError("Error decoding VDS", e)
+            AlertDialog.Builder(requireContext())
+                .setTitle("Error")
+                .setMessage("Failed to process document:\n${e.message}")
+                .setPositiveButton("OK", null)
+                .show()
         }
     }
 
