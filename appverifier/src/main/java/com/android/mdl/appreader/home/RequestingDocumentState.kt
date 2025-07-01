@@ -15,7 +15,7 @@ data class RequestingDocumentState(
     val custom: DocumentElementsRequest = DocumentElementsRequest(R.string.mdl_custom),
     val mVR: DocumentElementsRequest = DocumentElementsRequest(R.string.mvr_full),
     val micov: DocumentElementsRequest = DocumentElementsRequest(R.string.micov_full),
-    val euPid: DocumentElementsRequest = DocumentElementsRequest(R.string.eu_pid_full),
+    val euPid: DocumentElementsRequest = DocumentElementsRequest(R.string.eu_pid_full, true),
     val mdlWithLinkage: DocumentElementsRequest = DocumentElementsRequest(R.string.mdl_micov_linkage)
 ) {
 

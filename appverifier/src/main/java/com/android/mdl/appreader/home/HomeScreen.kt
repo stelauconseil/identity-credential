@@ -10,7 +10,9 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.ui.zIndex
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -66,7 +68,7 @@ fun HomeScreen(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Spacer(modifier = Modifier.height(64.dp))
+            Spacer(modifier = Modifier.height(10.dp))
             Text(
                 text = "Documents to request",
                 style = MaterialTheme.typography.titleLarge,
@@ -99,19 +101,43 @@ fun HomeScreen(
                 )
             }
         }
-        CreateRequestDropDown(
-            modifier = Modifier
-                .padding(top = 100.dp, start = 16.dp, end = 16.dp)
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(16.dp)),
-            selectionState = state,
-            dropDownOpened = dropDownOpened,
-            onSelectionUpdated = onSelectionUpdated,
-            onConfirm = {
-                onRequestConfirm(it)
-                dropDownOpened = false
+        // Overlay and dropdown - rendered in a separate layer on top of everything
+        if (dropDownOpened) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .zIndex(1f) // Ensure this is above other content
+            ) {
+                // Semi-transparent overlay that covers the entire screen
+                Box(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.5f))
+                        .clickable { dropDownOpened = false }
+                )
+                
+                // Dropdown content
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp)
+                ) {
+                    Spacer(modifier = Modifier.height(88.dp)) // Adjust this to match your header height
+                    CreateRequestDropDown(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clip(RoundedCornerShape(16.dp)),
+                        selectionState = state,
+                        dropDownOpened = dropDownOpened,
+                        onSelectionUpdated = onSelectionUpdated,
+                        onConfirm = {
+                            onRequestConfirm(it)
+                            dropDownOpened = false
+                        }
+                    )
+                }
             }
-        )
+        }
         Column(
             modifier = Modifier.align(Alignment.BottomCenter),
             horizontalAlignment = Alignment.CenterHorizontally
@@ -160,7 +186,7 @@ private fun NfcLabel(
             color = MaterialTheme.colorScheme.onBackground
         )
         Image(
-            modifier = Modifier.size(200.dp),
+            modifier = Modifier.size(100.dp),
             painter = painterResource(id = R.drawable.ic_nfc),
             contentDescription = null,
             contentScale = ContentScale.Crop

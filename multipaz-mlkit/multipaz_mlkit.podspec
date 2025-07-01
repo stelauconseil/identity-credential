@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'multipaz_mlkit'
-    spec.version                  = '0.93.0-pre.1.01aaf13f'
+    spec.version                  = '0.93.0-pre.4.6a2ba451'
     spec.homepage                 = ''
     spec.source                   = { :http=> ''}
     spec.authors                  = ''

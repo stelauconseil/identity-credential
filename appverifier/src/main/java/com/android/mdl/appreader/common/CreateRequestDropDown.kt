@@ -43,7 +43,7 @@ fun CreateRequestDropDown(
     onSelectionUpdated: (elements: DocumentElementsRequest) -> Unit,
     onConfirm: (request: RequestingDocumentState) -> Unit
 ) {
-    val maxHeight = LocalConfiguration.current.screenHeightDp.dp * 0.55f // 55% of screen height
+    val maxHeight = LocalConfiguration.current.screenHeightDp.dp * 0.58f // 55% of screen height
     val heightValue = if (dropDownOpened) maxHeight else 0.dp
     val height by animateDpAsState(
         targetValue = heightValue,
