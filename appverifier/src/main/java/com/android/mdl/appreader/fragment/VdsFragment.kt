@@ -155,7 +155,7 @@ class VdsFragment : DialogFragment() {
 
             // Deciphered Block
             data["decipheredBlock"]?.let { decipheredBlock ->
-                container.addView(createInfoItem(context, "Deciphered Block", decipheredBlock))
+                container.addView(createInfoItem(context, "Decrypted Block", decipheredBlock))
             }
             
             // Error message if present

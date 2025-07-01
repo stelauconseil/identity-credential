@@ -24,10 +24,8 @@ import com.android.mdl.appreader.util.TransferStatus
 import com.android.mdl.appreader.util.logDebug
 import com.android.mdl.appreader.util.logError
 import com.budiyev.android.codescanner.CodeScanner
-import com.budiyev.android.codescanner.CodeScanner.com.google.zxing.BarcodeFormat.QR_CODE
 import com.budiyev.android.codescanner.DecodeCallback
 import com.budiyev.android.codescanner.ScanMode
-import com.google.zxing.BarcodeFormat
 import com.google.zxing.BarcodeFormat.QR_CODE
 import com.stelau.cb2d.Cb2d
 
